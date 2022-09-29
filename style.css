@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(75px, 375px));
+  gap: 10px;
+}
+
+
+.block {
+  /* 750 x 490 / 375 x 245 */
+  transition: all 0.3s ease-in;
+}
+
+.block:hover,
+.block:focus {
+  cursor: pointer;
+  filter: opacity(85%);
+}
+
+.block--actv {
+  z-index: 1;
+  
+  transform: scale(1.05);
+}
+
+.block--replace {
+  filter: blur(3px);
+}
